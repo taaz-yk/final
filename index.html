@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Nova Web creates professional websites that help local businesses attract customers and grow."
+    >
+
+    <title>Nova Web | Professional Website Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-circle"></div>
+
+        <div class="loader-logo">
+            NOVA<span>WEB</span>
+        </div>
+    </div>
+
+    <!-- Mouse Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Navigation -->
+    <header class="site-header" id="siteHeader">
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo" aria-label="Nova Web homepage">
+                NOVA<span>WEB</span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#process">Process</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="contact.html" class="nav-button">
+                    Start a Project
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <div class="hero-background"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-one"></div>
+            <div class="hero-orb hero-orb-two"></div>
+
+            <div class="container hero-layout">
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Professional websites for growing businesses
+                    </div>
+
+                    <h1>
+                        You Run The Business.
+                        <span>I'll Build The Website.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Your next customer is already searching for you.
+                        Let’s make sure they find <strong>you</strong> first.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="contact.html" class="primary-button">
+                            Start Your Project
+                            <span>→</span>
+                        </a>
+
+                        <a href="#benefits" class="secondary-button">
+                            See What You Get
+                        </a>
+
+                    </div>
+
+                    <div class="hero-points">
+
+                        <div>
+                            <span class="check-icon">✓</span>
+                            Mobile-friendly
+                        </div>
+
+                        <div>
+                            <span class="check-icon">✓</span>
+                            Fast and modern
+                        </div>
+
+                        <div>
+                            <span class="check-icon">✓</span>
+                            Built for your business
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CSS Laptop Mockup -->
+                <div class="hero-visual">
+
+                    <div class="visual-glow"></div>
+
+                    <div class="floating-card floating-card-one">
+                        <div class="floating-icon">⚡</div>
+
+                        <div>
+                            <strong>Fast Loading</strong>
+                            <span>Built for speed</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-two">
+                        <div class="floating-icon">↗</div>
+
+                        <div>
+                            <strong>Built to Grow</strong>
+                            <span>Turn visits into customers</span>
+                        </div>
+                    </div>
+
+                    <div class="laptop">
+
+                        <div class="laptop-screen">
+
+                            <div class="browser-bar">
+                                <div class="browser-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="browser-address">
+                                    novawebdesign.com
+                                </div>
+                            </div>
+
+                            <div class="website-preview">
+
+                                <div class="preview-nav">
+                                    <div class="preview-logo">
+                                        NOVA<span>WEB</span>
+                                    </div>
+
+                                    <div class="preview-links">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+
+                                <div class="preview-content">
+
+                                    <div class="preview-badge">
+                                        MODERN WEBSITE DESIGN
+                                    </div>
+
+                                    <h2>
+                                        Make Your Business
+                                        <span>Impossible to Ignore.</span>
+                                    </h2>
+
+                                    <p>
+                                        Premium websites designed to build trust,
+                                        attract customers, and grow your brand.
+                                    </p>
+
+                                    <div class="preview-button"></div>
+
+                                </div>
+
+                                <div class="preview-card-row">
+                                    <div class="preview-card"></div>
+                                    <div class="preview-card"></div>
+                                    <div class="preview-card"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="laptop-base">
+                            <div class="laptop-notch"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#benefits" class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </a>
+
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section benefits-section" id="benefits">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-label">
+                        WHY NOVA WEB
+                    </div>
+
+                    <h2>
+                        More Than Just
+                        <span>A Good-Looking Website.</span>
+                    </h2>
+
+                    <p>
+                        Your website should make your business look trustworthy,
+                        professional, and easy to choose.
+                    </p>
+
+                </div>
+
+                <div class="benefit-grid">
+
+                    <article class="benefit-card reveal">
+
+                        <div class="card-number">01</div>
+
+                        <div class="benefit-icon">⚡</div>
+
+                        <h3>Fast Performance</h3>
+
+                        <p>
+                            A clean and optimized website that loads quickly and
+                            keeps potential customers from leaving.
+                        </p>
+
+                        <div class="card-line"></div>
+
+                    </article>
+
+                    <article class="benefit-card reveal">
+
+                        <div class="card-number">02</div>
+
+                        <div class="benefit-icon">◫</div>
+
+                        <h3>Mobile Ready</h3>
+
+                        <p>
+                            Your website will look professional on phones,
+                            tablets, laptops, and desktop computers.
+                        </p>
+
+                        <div class="card-line"></div>
+
+                    </article>
+
+                    <article class="benefit-card reveal">
+
+                        <div class="card-number">03</div>
+
+                        <div class="benefit-icon">◎</div>
+
+                        <h3>Built for Customers</h3>
+
+                        <p>
+                            Clear sections, strong calls to action, and a design
+                            that helps visitors understand your business.
+                        </p>
+
+                        <div class="card-line"></div>
+
+                    </article>
+
+                    <article class="benefit-card reveal">
+
+                        <div class="card-number">04</div>
+
+                        <div class="benefit-icon">✦</div>
+
+                        <h3>Made for Your Brand</h3>
+
+                        <p>
+                            No generic-looking website. Your colors, services,
+                            message, and personality shape the final design.
+                        </p>
+
+                        <div class="card-line"></div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Statement Section -->
+        <section class="statement-section">
+
+            <div class="container">
+
+                <div class="statement-card reveal">
+
+                    <div class="statement-glow"></div>
+
+                    <p class="statement-small">
+                        FIRST IMPRESSIONS MATTER
+                    </p>
+
+                    <h2>
+                        People judge your business before they ever call you.
+                    </h2>
+
+                    <p>
+                        A professional website helps customers trust your business,
+                        understand what you offer, and take the next step.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Process Section -->
+        <section class="section process-section" id="process">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <div class="section-label">
+                        THE PROCESS
+                    </div>
+
+                    <h2>
+                        Simple From
+                        <span>Start to Finish.</span>
+                    </h2>
+
+                    <p>
+                        You focus on your business. Nova Web handles the design
+                        and structure of your new website.
+                    </p>
+
+                </div>
+
+                <div class="process-list">
+
+                    <article class="process-item reveal">
+
+                        <div class="process-number">01</div>
+
+                        <div class="process-content">
+                            <h3>Tell Me About Your Business</h3>
+
+                            <p>
+                                Share your services, goals, colors, style, and
+                                what you want your website to accomplish.
+                            </p>
+                        </div>
+
+                        <div class="process-arrow">↗</div>
+
+                    </article>
+
+                    <article class="process-item reveal">
+
+                        <div class="process-number">02</div>
+
+                        <div class="process-content">
+                            <h3>Your Website Gets Designed</h3>
+
+                            <p>
+                                I build a modern website based on your business,
+                                your audience, and the information you provide.
+                            </p>
+                        </div>
+
+                        <div class="process-arrow">↗</div>
+
+                    </article>
+
+                    <article class="process-item reveal">
+
+                        <div class="process-number">03</div>
+
+                        <div class="process-content">
+                            <h3>Review and Refine</h3>
+
+                            <p>
+                                You review the website and request changes before
+                                the final version is prepared.
+                            </p>
+                        </div>
+
+                        <div class="process-arrow">↗</div>
+
+                    </article>
+
+                    <article class="process-item reveal">
+
+                        <div class="process-number">04</div>
+
+                        <div class="process-content">
+                            <h3>Launch Your New Website</h3>
+
+                            <p>
+                                Once everything looks right, your website is ready
+                                to be connected to a domain and published.
+                            </p>
+                        </div>
+
+                        <div class="process-arrow">↗</div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-card reveal">
+
+                    <div class="cta-orb"></div>
+
+                    <div class="section-label">
+                        READY TO GET STARTED?
+                    </div>
+
+                    <h2>
+                        Let’s Build Something
+                        <span>Incredible.</span>
+                    </h2>
+
+                    <p>
+                        Tell me about your business and what you want your new
+                        website to accomplish.
+                    </p>
+
+                    <a href="contact.html" class="primary-button">
+                        Start Your Project
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    NOVA<span>WEB</span>
+                </a>
+
+                <p>
+                    Professional websites built for growing businesses.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#process">Process</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <p class="copyright">
+                © <span id="currentYear"></span> Nova Web
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
