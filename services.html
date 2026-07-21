@@ -2,33 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore Nova Web services, including custom website design, redesigns, responsive layouts, SEO setup, maintenance, and website launches."
+    >
 
     <title>Services | Nova Web</title>
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="navbar">
-        <a href="index.html" class="logo">NOVA WEB</a>
+    <!-- Mouse Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="contact.html">Contact</a>
+    <!-- Navigation -->
+    <header class="site-header" id="siteHeader">
+        <nav class="navbar container">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Nova Web homepage"
+            >
+                NOVA<span>WEB</span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="index.html#benefits">Benefits</a>
+                <a href="index.html#process">Process</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="contact.html" class="nav-button">
+                    Start a Project
+                </a>
+            </div>
+
         </nav>
     </header>
 
     <main class="services-page">
 
+        <!-- Services Hero -->
         <section class="services-hero">
             <p class="section-label">WHAT WE OFFER</p>
 
@@ -43,6 +87,7 @@
             </p>
         </section>
 
+        <!-- Services Grid -->
         <section class="services-grid">
 
             <article class="service-card">
@@ -58,7 +103,7 @@
                 <ul>
                     <li>Modern custom design</li>
                     <li>Mobile-friendly layout</li>
-                    <li>Fast loading pages</li>
+                    <li>Fast-loading pages</li>
                     <li>Contact form setup</li>
                 </ul>
             </article>
@@ -138,7 +183,7 @@
             <article class="service-card">
                 <div class="service-number">06</div>
 
-                <h2>Domain & Launch Setup</h2>
+                <h2>Domain &amp; Launch Setup</h2>
 
                 <p>
                     Help connecting your custom domain and getting your website
@@ -155,18 +200,20 @@
 
         </section>
 
+        <!-- Call to Action -->
         <section class="services-cta">
             <p class="section-label">START YOUR PROJECT</p>
 
             <h2>Ready to bring your website idea to life?</h2>
 
             <p>
-                Tell Nova Web what you need, and we’ll help create a website
-                built around your vision.
+                Tell Nova Web what you need, and we’ll create a website built
+                around your vision.
             </p>
 
             <a href="contact.html" class="primary-button">
                 Tell Me Your Dream Website
+                <span>→</span>
             </a>
         </section>
 
@@ -176,5 +223,6 @@
         <p>© 2026 Nova Web. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
