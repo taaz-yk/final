@@ -157,46 +157,83 @@ if (currentYear) {
     currentYear.textContent =
         new Date().getFullYear().toString();
 }
-
-
-/* ---------- Contact Form Demo ---------- */
-
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-if (contactForm && formMessage) {
-    contactForm.addEventListener("submit", (event) => {
+if (contactForm && typeof emailjs !== "undefined") {
+    emailjs.init({
+        publicKey: "UIZQTs_INJVNqPoCC"
+    });
+
+    contactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        const originalButtonHTML = submitButton.innerHTML;
         const formData = new FormData(contactForm);
 
-        const name =
-            String(formData.get("name") || "").trim();
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const business = formData.get("business");
+        const website = formData.get("website") || "No website provided";
+        const service = formData.get("service") || "Not selected";
+        const project = formData.get("project");
+        const budget = formData.get("budget") || "Not selected";
 
-        const email =
-            String(formData.get("email") || "").trim();
+        const templateParams = {
+            name: name,
+            email: email,
 
-        const business =
-            String(formData.get("business") || "").trim();
+            title: `${business} — ${service}`,
 
-        const project =
-            String(formData.get("project") || "").trim();
+            message: `
+Business Name: ${business}
+Email: ${email}
+Current Website: ${website}
+Requested Service: ${service}
+Estimated Budget: ${budget}
 
-        if (!name || !email || !business || !project) {
-            formMessage.textContent =
-                "Please complete the required fields before submitting.";
+Project Details:
+${project}
+            `.trim()
+        };
 
-            formMessage.classList.add("visible");
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
 
-            return;
+        if (formMessage) {
+            formMessage.textContent = "Sending your project details...";
+            formMessage.className = "form-message";
         }
 
-        formMessage.textContent =
-            `Thanks, ${name}. Your form design is working. ` +
-            "A real email service will be connected before the website launches.";
+        try {
+            await emailjs.send(
+                "service_3b3jy9c",
+                "template_4u7muax",
+                templateParams
+            );
 
-        formMessage.classList.add("visible");
+            if (formMessage) {
+                formMessage.textContent =
+                    "Your project details were sent successfully!";
+                formMessage.className = "form-message success";
+            }
 
-        contactForm.reset();
+            contactForm.reset();
+        } catch (error) {
+            console.error("EmailJS error:", error);
+
+            if (formMessage) {
+                formMessage.textContent =
+                    "The message could not be sent. Please try again.";
+                formMessage.className = "form-message error";
+            }
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonHTML;
+        }
     });
 }
