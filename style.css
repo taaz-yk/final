@@ -2555,3 +2555,221 @@ strong {
     }
 
 }
+/* =========================
+   SERVICES PAGE
+========================= */
+
+.services-page {
+    min-height: 100vh;
+    padding: 140px 7% 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-page::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 119, 255, 0.18);
+    filter: blur(150px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.services-hero {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.section-label {
+    color: #55aaff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.services-hero h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.services-hero h1 span {
+    color: #4da6ff;
+    text-shadow: 0 0 30px rgba(0, 132, 255, 0.55);
+}
+
+.services-intro {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #b9c0cc;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.services-grid {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(52, 148, 255, 0.55);
+    box-shadow: 0 20px 55px rgba(0, 112, 255, 0.16);
+}
+
+.service-number {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    background: rgba(0, 119, 255, 0.14);
+    border: 1px solid rgba(70, 163, 255, 0.28);
+    color: #69b5ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.8rem;
+}
+
+.service-card h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+}
+
+.service-card p {
+    color: #aab2bf;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-card li {
+    color: #d4d9e1;
+    margin-bottom: 11px;
+    font-size: 0.93rem;
+}
+
+.service-card li::before {
+    content: "✓";
+    color: #52a9ff;
+    margin-right: 10px;
+}
+
+.services-cta {
+    max-width: 950px;
+    margin: 100px auto 20px;
+    padding: 65px 35px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid rgba(82, 169, 255, 0.25);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 119, 255, 0.13),
+            rgba(255, 255, 255, 0.03)
+        );
+    position: relative;
+    z-index: 1;
+}
+
+.services-cta h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 18px;
+}
+
+.services-cta p:not(.section-label) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #b6bdc8;
+    line-height: 1.7;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 15px 26px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #087cff, #42adff);
+    box-shadow: 0 12px 35px rgba(0, 119, 255, 0.35);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0, 119, 255, 0.5);
+}
+
+nav a.active {
+    color: #56aaff;
+}
+
+.site-footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: #77808e;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 950px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .services-page {
+        padding: 120px 5% 60px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 27px;
+    }
+
+    .services-cta {
+        margin-top: 70px;
+        padding: 50px 24px;
+    }
+}
